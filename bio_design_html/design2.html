@@ -16,6 +16,13 @@
         .header {
             position: fixed;
             width: 1400px;
+            margin-top: 0;
+
+            -webkit-transition: margin-top 0.3s;
+            transition: margin-top 0.3s;
+        }
+        .header.hide-login {
+            margin-top: -30px;
         }
         .main {
             padding-top: 155px;
@@ -33,6 +40,31 @@
             <img src="img/bio-2.jpg" alt="">
         </div>
     </div>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+        $(function() {
+
+            var last_scroll_top = 0;
+            var header = $('.header');
+
+            $(document).scroll(function(e) {
+
+                var scroll_top = $(document).scrollTop();
+
+                if ( scroll_top >= 155 && scroll_top > last_scroll_top ) {
+                    header.addClass('hide-login');
+                }
+
+                if ( scroll_top < 500 && scroll_top < last_scroll_top ) {
+                    header.removeClass('hide-login');
+                }
+
+                last_scroll_top = scroll_top;
+
+            });
+        });
+    </script>
 
 </body>
 </html>
