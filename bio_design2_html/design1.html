@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bioelements Design: Version 3</title>
+    <style>
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper {
+            position: relative;
+            margin: 0 auto;
+            width: 1400px;
+        }
+        .header {
+            position: fixed;
+            width: 1400px;
+            margin-top: 0;
+
+            -webkit-transition: margin-top 0.3s;
+            transition: margin-top 0.3s;
+        }
+        .header.hide-login {
+            margin-top: -30px;
+        }
+
+        .main {
+            padding-top: 167px;
+            width: 1400px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="header">
+            <img src="img/bio-header.png" alt="">
+        </div>
+        <div class="main">
+            <img src="img/bio-layout-new.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+        $(function() {
+
+            // var last_scroll_top = 0;
+            // var header = $('.header');
+
+            // $(document).scroll(function(e) {
+
+            //     var scroll_top = $(document).scrollTop();
+
+            //     if ( scroll_top >= 155 && scroll_top > last_scroll_top ) {
+            //         header.addClass('hide-login');
+            //     }
+
+            //     if ( scroll_top < 600 && scroll_top < last_scroll_top ) {
+            //         header.removeClass('hide-login');
+            //     }
+
+            //     last_scroll_top = scroll_top;
+
+            });
+        });
+    </script>
+</body>
+</html>
